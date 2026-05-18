@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CrudSqliteRomero.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="24,20"
+            Spacing="16">
+
+            <Label Text="Gestión de motos"
+                   FontSize="24"
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold" />
+
+            <Border Padding="16" Stroke="#DDDDDD" StrokeThickness="1">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="16" />
+                </Border.StrokeShape>
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="Id" FontAttributes="Bold" />
+                    <Entry x:Name="txtId" Placeholder="Ingrese el Id de la moto" Keyboard="Numeric" />
+
+                    <Label Text="Marca" FontAttributes="Bold" />
+                    <Entry x:Name="txtMarca" Placeholder="Ingrese la marca de la moto" />
+
+                    <Label Text="Modelo" FontAttributes="Bold" />
+                    <Entry x:Name="txtModelo" Placeholder="Ingrese el modelo de la moto" />
+
+                    <Label Text="Año" FontAttributes="Bold" />
+                    <Entry x:Name="txtAnio" Placeholder="Ingrese el año de la moto" Keyboard="Numeric" />
+                </VerticalStackLayout>
+            </Border>
+
+            <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto" ColumnSpacing="12" RowSpacing="12">
+                <Button x:Name="cmdCrear" Text="Crear" Clicked="cmdCrear_Clicked" Grid.Row="0" Grid.Column="0" />
+                <Button x:Name="cmdLerr" Text="Leer" Clicked="cmdLerr_Clicked" Grid.Row="0" Grid.Column="1" />
+                <Button x:Name="cmdActualizar" Text="Actualizar" Clicked="cmdActualizar_Clicked" Grid.Row="1" Grid.Column="0" />
+                <Button x:Name="cmdBorrar" Text="Borrar" Clicked="cmdBorrar_Clicked" Grid.Row="1" Grid.Column="1" />
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
